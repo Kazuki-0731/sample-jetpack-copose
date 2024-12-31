@@ -43,11 +43,11 @@ import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.layout.width
 import androidx.glance.text.Text
-import com.example.sample_jetpack_compose.JetnewsApplication.Companion.JETNEWS_APP_URI
+import com.example.sample_jetpack_compose.MainActivity
 import com.example.sample_jetpack_compose.R
 import com.example.sample_jetpack_compose.glance.ui.theme.JetnewsGlanceTextStyles
 import com.example.sample_jetpack_compose.model.Post
-import com.example.sample_jetpack_compose.ui.MainActivity
+import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
 
 enum class PostLayout { HORIZONTAL_SMALL, HORIZONTAL_LARGE, VERTICAL }
 

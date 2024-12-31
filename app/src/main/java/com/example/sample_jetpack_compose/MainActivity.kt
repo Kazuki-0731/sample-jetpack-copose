@@ -6,8 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
-import com.example.sample_jetpack_compose.ui.JetnewsApp
 import com.example.sample_jetpack_compose.ui.App
+import com.example.sample_jetpack_compose.ui.JetnewsApp
 
 class MainActivity : AppCompatActivity() {
 
