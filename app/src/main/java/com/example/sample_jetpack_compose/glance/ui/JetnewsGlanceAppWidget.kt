@@ -50,14 +50,14 @@ import androidx.glance.layout.width
 import com.example.sample_jetpack_compose.ui.App
 import com.example.sample_jetpack_compose.R
 import com.example.sample_jetpack_compose.data.successOr
-import com.example.sample_jetpack_compose.glance.ui.theme.JetnewsGlanceColorScheme
+import com.example.sample_jetpack_compose.glance.ui.theme.CatsGlanceColorScheme
 import com.example.sample_jetpack_compose.model.Post
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class JetnewsGlanceAppWidget : GlanceAppWidget() {
+class CatsGlanceAppWidget : GlanceAppWidget() {
     override val sizeMode: SizeMode = SizeMode.Exact
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
@@ -87,10 +87,10 @@ class JetnewsGlanceAppWidget : GlanceAppWidget() {
                 colors = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                     GlanceTheme.colors
                 } else {
-                    JetnewsGlanceColorScheme.colors
+                    CatsGlanceColorScheme.colors
                 }
             ) {
-                JetnewsContent(
+                CatsContent(
                     posts = recommendedTopPosts,
                     bookmarks = bookmarks,
                     onToggleBookmark = { scope.launch { postsRepository.toggleFavorite(it) } }
@@ -100,7 +100,7 @@ class JetnewsGlanceAppWidget : GlanceAppWidget() {
     }
 
     @Composable
-    private fun JetnewsContent(
+    private fun CatsContent(
         posts: List<Post>,
         bookmarks: Set<String>?,
         onToggleBookmark: (String) -> Unit

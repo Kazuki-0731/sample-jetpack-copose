@@ -1,15 +1,15 @@
 package com.example.sample_jetpack_compose
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import com.example.sample_jetpack_compose.ui.App
-import com.example.sample_jetpack_compose.ui.JetnewsApp
+import com.example.sample_jetpack_compose.ui.CatsApp
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val appContainer = (application as App).container
         setContent {
             val widthSizeClass = calculateWindowSizeClass(this).widthSizeClass
-            JetnewsApp(appContainer, widthSizeClass)
+            CatsApp(appContainer, widthSizeClass)
         }
     }
 }

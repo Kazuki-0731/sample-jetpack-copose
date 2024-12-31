@@ -34,8 +34,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.sample_jetpack_compose.R
-import com.example.sample_jetpack_compose.ui.JetnewsDestinations
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.CatsDestinations
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 
 @Composable
 fun AppNavRail(
@@ -57,14 +57,14 @@ fun AppNavRail(
     ) {
         Spacer(Modifier.weight(1f))
         NavigationRailItem(
-            selected = currentRoute == JetnewsDestinations.HOME_ROUTE,
+            selected = currentRoute == CatsDestinations.HOME_ROUTE,
             onClick = navigateToHome,
             icon = { Icon(Icons.Filled.Home, stringResource(R.string.home_title)) },
             label = { Text(stringResource(R.string.home_title)) },
             alwaysShowLabel = false
         )
         NavigationRailItem(
-            selected = currentRoute == JetnewsDestinations.INTERESTS_ROUTE,
+            selected = currentRoute == CatsDestinations.INTERESTS_ROUTE,
             onClick = navigateToInterests,
             icon = { Icon(Icons.Filled.ListAlt, stringResource(R.string.interests_title)) },
             label = { Text(stringResource(R.string.interests_title)) },
@@ -78,9 +78,9 @@ fun AppNavRail(
 @Preview("Drawer contents (dark)", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun PreviewAppNavRail() {
-    JetnewsTheme {
+    CatsTheme {
         AppNavRail(
-            currentRoute = JetnewsDestinations.HOME_ROUTE,
+            currentRoute = CatsDestinations.HOME_ROUTE,
             navigateToHome = {},
             navigateToInterests = {},
         )

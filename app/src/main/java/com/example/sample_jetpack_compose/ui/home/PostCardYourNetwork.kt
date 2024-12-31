@@ -47,7 +47,7 @@ import com.example.sample_jetpack_compose.data.posts.impl.post4
 import com.example.sample_jetpack_compose.data.posts.impl.post5
 import com.example.sample_jetpack_compose.model.Post
 import com.example.sample_jetpack_compose.model.PostAuthor
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -108,7 +108,7 @@ fun PostCardPopular(
 fun PreviewPostCardPopular(
     @PreviewParameter(PostPreviewParameterProvider::class, limit = 1) post: Post
 ) {
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             PostCardPopular(post, {})
         }
@@ -129,7 +129,7 @@ fun PreviewPostCardPopularLongText(
         facilisis eget magna quis, rhoncus volutpat mi. Phasellus vel sollicitudin quam, eu
         consectetur dolor. Proin lobortis venenatis sem, in vestibulum est. Duis ac nibh interdum,
         """.trimIndent()
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             PostCardPopular(
                 post.copy(

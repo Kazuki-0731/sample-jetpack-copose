@@ -44,7 +44,7 @@ val defaultTextStyle = TextStyle(
     )
 )
 
-val JetnewsTypography = Typography(
+val CatsTypography = Typography(
     displayLarge = defaultTextStyle.copy(
         fontSize = 57.sp, lineHeight = 64.sp, letterSpacing = (-0.25).sp
     ),

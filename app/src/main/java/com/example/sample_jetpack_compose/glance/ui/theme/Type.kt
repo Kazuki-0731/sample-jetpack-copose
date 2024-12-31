@@ -19,7 +19,7 @@ package com.example.sample_jetpack_compose.glance.ui.theme
 import androidx.compose.ui.unit.sp
 import androidx.glance.text.TextStyle
 
-object JetnewsGlanceTextStyles {
+object CatsGlanceTextStyles {
     val bodyLarge = TextStyle(fontSize = 16.sp)
     val bodySmall = TextStyle(fontSize = 12.sp)
 }

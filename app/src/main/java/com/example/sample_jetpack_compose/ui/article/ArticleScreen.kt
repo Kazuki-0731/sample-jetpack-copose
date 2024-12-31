@@ -61,7 +61,7 @@ import com.example.sample_jetpack_compose.data.Result
 import com.example.sample_jetpack_compose.data.posts.impl.BlockingFakePostsRepository
 import com.example.sample_jetpack_compose.data.posts.impl.post3
 import com.example.sample_jetpack_compose.model.Post
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 import com.example.sample_jetpack_compose.ui.utils.BookmarkButton
 import com.example.sample_jetpack_compose.ui.utils.FavoriteButton
 import com.example.sample_jetpack_compose.ui.utils.ShareButton
@@ -244,7 +244,7 @@ fun sharePost(post: Post, context: Context) {
 @Preview("Article screen (big font)", fontScale = 1.5f)
 @Composable
 fun PreviewArticleDrawer() {
-    JetnewsTheme {
+    CatsTheme {
         val post = runBlocking {
             (BlockingFakePostsRepository().getPost(post3.id) as Result.Success).data
         }
@@ -261,7 +261,7 @@ fun PreviewArticleDrawer() {
 @Preview("Article screen navrail (big font)", fontScale = 1.5f, device = Devices.PIXEL_C)
 @Composable
 fun PreviewArticleNavRail() {
-    JetnewsTheme {
+    CatsTheme {
         val post = runBlocking {
             (BlockingFakePostsRepository().getPost(post3.id) as Result.Success).data
         }

@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
  * [SnackbarHost] that is configured for insets and large screens
  */
 @Composable
-fun JetnewsSnackbarHost(
+fun CatsSnackbarHost(
     hostState: SnackbarHostState,
     modifier: Modifier = Modifier,
     snackbar: @Composable (SnackbarData) -> Unit = { Snackbar(it) }

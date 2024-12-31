@@ -24,8 +24,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
-import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
 import com.example.sample_jetpack_compose.data.AppContainer
+import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
 import com.example.sample_jetpack_compose.ui.home.HomeRoute
 import com.example.sample_jetpack_compose.ui.home.HomeViewModel
 import com.example.sample_jetpack_compose.ui.interests.InterestsRoute
@@ -34,13 +34,13 @@ import com.example.sample_jetpack_compose.ui.interests.InterestsViewModel
 const val POST_ID = "postId"
 
 @Composable
-fun JetnewsNavGraph(
+fun CatsNavGraph(
     appContainer: AppContainer,
     isExpandedScreen: Boolean,
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
     openDrawer: () -> Unit = {},
-    startDestination: String = JetnewsDestinations.HOME_ROUTE,
+    startDestination: String = CatsDestinations.HOME_ROUTE,
 ) {
     NavHost(
         navController = navController,
@@ -48,11 +48,11 @@ fun JetnewsNavGraph(
         modifier = modifier
     ) {
         composable(
-            route = JetnewsDestinations.HOME_ROUTE,
+            route = CatsDestinations.HOME_ROUTE,
             deepLinks = listOf(
                 navDeepLink {
                     uriPattern =
-                        "$JETNEWS_APP_URI/${JetnewsDestinations.HOME_ROUTE}?$POST_ID={$POST_ID}"
+                        "$JETNEWS_APP_URI/${CatsDestinations.HOME_ROUTE}?$POST_ID={$POST_ID}"
                 }
             )
         ) { navBackStackEntry ->
@@ -68,7 +68,7 @@ fun JetnewsNavGraph(
                 openDrawer = openDrawer,
             )
         }
-        composable(JetnewsDestinations.INTERESTS_ROUTE) {
+        composable(CatsDestinations.INTERESTS_ROUTE) {
             val interestsViewModel: InterestsViewModel = viewModel(
                 factory = InterestsViewModel.provideFactory(appContainer.interestsRepository)
             )

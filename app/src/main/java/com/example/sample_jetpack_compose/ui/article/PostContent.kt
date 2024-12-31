@@ -76,7 +76,7 @@ import com.example.sample_jetpack_compose.model.Metadata
 import com.example.sample_jetpack_compose.model.Paragraph
 import com.example.sample_jetpack_compose.model.ParagraphType
 import com.example.sample_jetpack_compose.model.Post
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 
 private val defaultSpacerSize = 16.dp
 
@@ -347,7 +347,7 @@ private val ColorScheme.codeBlockBackground: Color
 @Preview("Post content (dark)", uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun PreviewPost() {
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             PostContent(post = post3)
         }

@@ -76,7 +76,7 @@ import com.example.sample_jetpack_compose.data.Result
 import com.example.sample_jetpack_compose.data.interests.InterestSection
 import com.example.sample_jetpack_compose.data.interests.TopicSelection
 import com.example.sample_jetpack_compose.data.interests.impl.FakeInterestsRepository
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 import kotlin.math.max
 import kotlinx.coroutines.runBlocking
 
@@ -502,7 +502,7 @@ private fun InterestsAdaptiveContentLayout(
 @Preview("Interests screen (big font)", "Interests", fontScale = 1.5f)
 @Composable
 fun PreviewInterestsScreenDrawer() {
-    JetnewsTheme {
+    CatsTheme {
         val tabContent = getFakeTabsContent()
         val (currentSection, updateSection) = rememberSaveable {
             mutableStateOf(tabContent.first().section)
@@ -530,7 +530,7 @@ fun PreviewInterestsScreenDrawer() {
 )
 @Composable
 fun PreviewInterestsScreenNavRail() {
-    JetnewsTheme {
+    CatsTheme {
         val tabContent = getFakeTabsContent()
         val (currentSection, updateSection) = rememberSaveable {
             mutableStateOf(tabContent.first().section)
@@ -554,7 +554,7 @@ fun PreviewTopicsTab() {
     val topics = runBlocking {
         (FakeInterestsRepository().getTopics() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             TabWithSections(topics, setOf()) { }
         }
@@ -568,7 +568,7 @@ fun PreviewPeopleTab() {
     val people = runBlocking {
         (FakeInterestsRepository().getPeople() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             TabWithTopics(people, setOf()) { }
         }
@@ -582,7 +582,7 @@ fun PreviewPublicationsTab() {
     val publications = runBlocking {
         (FakeInterestsRepository().getPublications() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             TabWithTopics(publications, setOf()) { }
         }

@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import com.example.sample_jetpack_compose.R
 import com.example.sample_jetpack_compose.data.posts.impl.posts
 import com.example.sample_jetpack_compose.model.Post
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 import com.example.sample_jetpack_compose.utils.CompletePreviews
 
 @Composable
@@ -93,7 +93,7 @@ fun PostCardTop(post: Post, modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun PostCardTopPreview() {
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             PostCardTop(posts.highlightedPost)
         }
@@ -109,7 +109,7 @@ fun PostCardTopPreview() {
 @CompletePreviews
 @Composable
 fun PostCardTopPreviews() {
-    JetnewsTheme {
+    CatsTheme {
         Surface {
             PostCardTop(posts.highlightedPost)
         }

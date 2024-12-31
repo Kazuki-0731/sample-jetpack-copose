@@ -106,9 +106,9 @@ import com.example.sample_jetpack_compose.model.Post
 import com.example.sample_jetpack_compose.model.PostsFeed
 import com.example.sample_jetpack_compose.ui.article.postContentItems
 import com.example.sample_jetpack_compose.ui.article.sharePost
-import com.example.sample_jetpack_compose.ui.components.JetnewsSnackbarHost
+import com.example.sample_jetpack_compose.ui.components.CatsSnackbarHost
 import com.example.sample_jetpack_compose.ui.modifiers.interceptKey
-import com.example.sample_jetpack_compose.ui.theme.JetnewsTheme
+import com.example.sample_jetpack_compose.ui.theme.CatsTheme
 import com.example.sample_jetpack_compose.ui.utils.BookmarkButton
 import com.example.sample_jetpack_compose.ui.utils.FavoriteButton
 import com.example.sample_jetpack_compose.ui.utils.ShareButton
@@ -293,7 +293,7 @@ private fun HomeScreenWithList(
     val topAppBarState = rememberTopAppBarState()
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(topAppBarState)
     Scaffold(
-        snackbarHost = { JetnewsSnackbarHost(hostState = snackbarHostState) },
+        snackbarHost = { CatsSnackbarHost(hostState = snackbarHostState) },
         topBar = {
             if (showTopAppBar) {
                 HomeTopAppBar(
@@ -743,7 +743,7 @@ fun PreviewHomeListDrawerScreen() {
     val postsFeed = runBlocking {
         (BlockingFakePostsRepository().getPostsFeed() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         HomeFeedScreen(
             uiState = HomeUiState.HasPosts(
                 postsFeed = postsFeed,
@@ -779,7 +779,7 @@ fun PreviewHomeListNavRailScreen() {
     val postsFeed = runBlocking {
         (BlockingFakePostsRepository().getPostsFeed() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         HomeFeedScreen(
             uiState = HomeUiState.HasPosts(
                 postsFeed = postsFeed,
@@ -811,7 +811,7 @@ fun PreviewHomeListDetailScreen() {
     val postsFeed = runBlocking {
         (BlockingFakePostsRepository().getPostsFeed() as Result.Success).data
     }
-    JetnewsTheme {
+    CatsTheme {
         HomeFeedWithArticleDetailsScreen(
             uiState = HomeUiState.HasPosts(
                 postsFeed = postsFeed,

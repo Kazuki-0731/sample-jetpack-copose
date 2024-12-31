@@ -18,8 +18,8 @@ package com.example.sample_jetpack_compose.glance
 
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
-import com.example.sample_jetpack_compose.glance.ui.JetnewsGlanceAppWidget
+import com.example.sample_jetpack_compose.glance.ui.CatsGlanceAppWidget
 
-class JetnewsGlanceAppWidgetReceiver : GlanceAppWidgetReceiver() {
-    override val glanceAppWidget: GlanceAppWidget = JetnewsGlanceAppWidget()
+class CatsGlanceAppWidgetReceiver : GlanceAppWidgetReceiver() {
+    override val glanceAppWidget: GlanceAppWidget = CatsGlanceAppWidget()
 }

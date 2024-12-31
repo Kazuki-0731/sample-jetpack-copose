@@ -45,7 +45,7 @@ import androidx.glance.layout.width
 import androidx.glance.text.Text
 import com.example.sample_jetpack_compose.MainActivity
 import com.example.sample_jetpack_compose.R
-import com.example.sample_jetpack_compose.glance.ui.theme.JetnewsGlanceTextStyles
+import com.example.sample_jetpack_compose.glance.ui.theme.CatsGlanceTextStyles
 import com.example.sample_jetpack_compose.model.Post
 import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
 
@@ -219,13 +219,13 @@ fun PostDescription(title: String, metadata: String, modifier: GlanceModifier) {
         Text(
             text = title,
             maxLines = 3,
-            style = JetnewsGlanceTextStyles.bodyLarge
+            style = CatsGlanceTextStyles.bodyLarge
                 .copy(color = GlanceTheme.colors.onBackground)
         )
         Spacer(modifier = GlanceModifier.height(4.dp))
         Text(
             text = metadata,
-            style = JetnewsGlanceTextStyles.bodySmall
+            style = CatsGlanceTextStyles.bodySmall
                 .copy(color = GlanceTheme.colors.onBackground)
         )
     }
