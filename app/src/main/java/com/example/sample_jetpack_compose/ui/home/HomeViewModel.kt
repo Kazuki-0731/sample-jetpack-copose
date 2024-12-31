@@ -25,13 +25,13 @@ import com.example.sample_jetpack_compose.data.posts.PostsRepository
 import com.example.sample_jetpack_compose.model.Post
 import com.example.sample_jetpack_compose.model.PostsFeed
 import com.example.sample_jetpack_compose.utils.ErrorMessage
-import java.util.UUID
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.UUID
 
 /**
  * UI state for the Home route.

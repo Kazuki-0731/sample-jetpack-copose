@@ -27,12 +27,12 @@ import kotlinx.coroutines.flow.Flow
 interface PostsRepository {
 
     /**
-     * Get a specific JetNews post.
+     * Get a specific Cats post.
      */
     suspend fun getPost(postId: String?): Result<Post>
 
     /**
-     * Get JetNews posts.
+     * Get Cats posts.
      */
     suspend fun getPostsFeed(): Result<PostsFeed>
 

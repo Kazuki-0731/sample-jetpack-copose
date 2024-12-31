@@ -47,11 +47,11 @@ import androidx.glance.layout.fillMaxWidth
 import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.layout.width
-import com.example.sample_jetpack_compose.ui.App
 import com.example.sample_jetpack_compose.R
 import com.example.sample_jetpack_compose.data.successOr
 import com.example.sample_jetpack_compose.glance.ui.theme.CatsGlanceColorScheme
 import com.example.sample_jetpack_compose.model.Post
+import com.example.sample_jetpack_compose.ui.App
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -133,7 +133,7 @@ class CatsGlanceAppWidget : GlanceAppWidget() {
         ) {
             val context = LocalContext.current
             Image(
-                provider = ImageProvider(R.drawable.ic_jetnews_logo),
+                provider = ImageProvider(R.drawable.ic_cats_logo),
                 colorFilter = ColorFilter.tint(GlanceTheme.colors.primary),
                 contentDescription = null,
                 modifier = GlanceModifier.size(24.dp)
@@ -142,7 +142,7 @@ class CatsGlanceAppWidget : GlanceAppWidget() {
             Image(
                 contentDescription = context.getString(R.string.app_name),
                 colorFilter = ColorFilter.tint(GlanceTheme.colors.onSurfaceVariant),
-                provider = ImageProvider(R.drawable.ic_jetnews_wordmark)
+                provider = ImageProvider(R.drawable.ic_cats_wordmark)
             )
         }
     }

@@ -6,7 +6,7 @@ import com.example.sample_jetpack_compose.data.AppContainerImpl
 
 class App : Application() {
     companion object {
-        const val JETNEWS_APP_URI = "https://developer.android.com/jetnews"
+        const val CATS_APP_URI = "https://developer.android.com/jetnews"
     }
 
     // AppContainer instance used by the rest of classes to obtain dependencies

@@ -25,7 +25,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
 import com.example.sample_jetpack_compose.data.AppContainer
-import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
+import com.example.sample_jetpack_compose.ui.App.Companion.CATS_APP_URI
 import com.example.sample_jetpack_compose.ui.home.HomeRoute
 import com.example.sample_jetpack_compose.ui.home.HomeViewModel
 import com.example.sample_jetpack_compose.ui.interests.InterestsRoute
@@ -52,7 +52,7 @@ fun CatsNavGraph(
             deepLinks = listOf(
                 navDeepLink {
                     uriPattern =
-                        "$JETNEWS_APP_URI/${CatsDestinations.HOME_ROUTE}?$POST_ID={$POST_ID}"
+                        "$CATS_APP_URI/${CatsDestinations.HOME_ROUTE}?$POST_ID={$POST_ID}"
                 }
             )
         ) { navBackStackEntry ->

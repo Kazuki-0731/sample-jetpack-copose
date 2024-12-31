@@ -47,7 +47,7 @@ import com.example.sample_jetpack_compose.MainActivity
 import com.example.sample_jetpack_compose.R
 import com.example.sample_jetpack_compose.glance.ui.theme.CatsGlanceTextStyles
 import com.example.sample_jetpack_compose.model.Post
-import com.example.sample_jetpack_compose.ui.App.Companion.JETNEWS_APP_URI
+import com.example.sample_jetpack_compose.ui.App.Companion.CATS_APP_URI
 
 enum class PostLayout { HORIZONTAL_SMALL, HORIZONTAL_LARGE, VERTICAL }
 
@@ -68,7 +68,7 @@ private fun openPostDetails(context: Context, post: Post): Action {
     return actionStartActivity(
         Intent(
             Intent.ACTION_VIEW,
-            "$JETNEWS_APP_URI/home?postId=${post.id}".toUri(),
+            "$CATS_APP_URI/home?postId=${post.id}".toUri(),
             context,
             MainActivity::class.java
         )
@@ -188,9 +188,9 @@ fun BookmarkButton(id: String, isBookmarked: Boolean, onToggleBookmark: (String)
     Image(
         provider = ImageProvider(
             if (isBookmarked) {
-                R.drawable.ic_jetnews_bookmark_filled
+                R.drawable.ic_cats_bookmark_filled
             } else {
-                R.drawable.ic_jetnews_bookmark
+                R.drawable.ic_cats_bookmark
             }
         ),
         colorFilter = ColorFilter.tint(GlanceTheme.colors.primary),

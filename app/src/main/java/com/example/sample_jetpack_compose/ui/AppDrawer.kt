@@ -55,7 +55,7 @@ fun AppDrawer(
         drawerState = drawerState,
         modifier = modifier,
     ) {
-        JetNewsLogo(
+        CatsLogo(
             modifier = Modifier.padding(horizontal = 28.dp, vertical = 24.dp)
         )
         NavigationDrawerItem(
@@ -76,16 +76,16 @@ fun AppDrawer(
 }
 
 @Composable
-private fun JetNewsLogo(modifier: Modifier = Modifier) {
+private fun CatsLogo(modifier: Modifier = Modifier) {
     Row(modifier = modifier) {
         Icon(
-            painterResource(R.drawable.ic_jetnews_logo),
+            painterResource(R.drawable.ic_cats_logo),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.primary
         )
         Spacer(Modifier.width(8.dp))
         Icon(
-            painter = painterResource(R.drawable.ic_jetnews_wordmark),
+            painter = painterResource(R.drawable.ic_cats_wordmark),
             contentDescription = stringResource(R.string.app_name),
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )

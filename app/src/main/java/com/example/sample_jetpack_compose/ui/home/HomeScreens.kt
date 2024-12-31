@@ -701,7 +701,7 @@ private fun HomeTopAppBar(
     CenterAlignedTopAppBar(
         title = {
             Image(
-                painter = painterResource(R.drawable.ic_jetnews_wordmark),
+                painter = painterResource(R.drawable.ic_cats_wordmark),
                 contentDescription = title,
                 contentScale = ContentScale.Inside,
                 colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
@@ -711,7 +711,7 @@ private fun HomeTopAppBar(
         navigationIcon = {
             IconButton(onClick = openDrawer) {
                 Icon(
-                    painter = painterResource(R.drawable.ic_jetnews_logo),
+                    painter = painterResource(R.drawable.ic_cats_logo),
                     contentDescription = stringResource(R.string.cd_open_navigation_drawer)
                 )
             }

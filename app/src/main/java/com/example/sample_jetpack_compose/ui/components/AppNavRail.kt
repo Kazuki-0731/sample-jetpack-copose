@@ -47,7 +47,7 @@ fun AppNavRail(
     NavigationRail(
         header = {
             Icon(
-                painterResource(R.drawable.ic_jetnews_logo),
+                painterResource(R.drawable.ic_cats_logo),
                 null,
                 Modifier.padding(vertical = 12.dp),
                 tint = MaterialTheme.colorScheme.primary
